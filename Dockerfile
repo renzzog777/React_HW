@@ -1,6 +1,9 @@
-FROM nginx AS origen
-COPY dist /usr/share/nginx/html
+FROM node:alpine AS build_stage
+WORKDIR '/app'
+COPY package.json .
+RUN npm install
+COPY . .
+RUN npm run build
 
-FROM alpine
-COPY --from=origen / /
-
+FROM nginx
+COPY --from=build_stage /app/build /usr/share/nginx/html
