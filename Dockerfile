@@ -4,4 +4,4 @@ COPY dist /usr/share/nginx/html
 
 FROM alpine:latest  
 WORKDIR /root/
-COPY --from /app/ ./
+COPY --from=original /app/ ./
