@@ -1,7 +1,7 @@
 FROM node AS original
 WORKDIR /app
 COPY dist /usr/share/nginx/html
-RUN nmp install
+RUN npm install
 COPY . .
 RUN npm run build
 
