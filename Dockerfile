@@ -1,8 +1,2 @@
-FROM node:alpine AS build_stage
-WORKDIR '/app'
-COPY package.json .
-RUN npm install
-RUN npm run build
-
 FROM nginx
-COPY --from=build_stage /app /usr/share/nginx/html
+COPY dist /usr/share/nginx/html
