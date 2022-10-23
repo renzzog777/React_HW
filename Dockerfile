@@ -1,10 +1,6 @@
-FROM node:16 as build
-WORKDIR /app
-COPY package.json .
-RUN npm install
+FROM nginx AS origin
+COPY dist /usr/share/nginx/html
 
-
-FROM node:alpine as main
-COPY --from=build /app /
-EXPOSE 8080
-CMD ["main.jsx"]
+FROM nginx:1.23-alpine
+WORKDIR /usr/share/nginx/html 
+COPY --from=origin /usr/share/nginx/html/dist  .
