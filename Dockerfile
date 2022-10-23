@@ -7,4 +7,4 @@ EXPOSE 8080
 CMD [ "node", "App.jsx" ]
 
 FROM nginx
-COPY --from=origin /usr/src/app /usr/share/nginx/html
+COPY --from=origin /usr/src/app/dir /usr/share/nginx/html
