@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Github Actions and Docker Stages in Action !!!</p>
+        <p> Applaudo Week 4 Challenge: Github Actions and Docker Stages in Action !!!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
