@@ -86,7 +86,7 @@ In the image we can see that the container is created correctly, it's up and run
 ```sh
 localhost:8080
 ```
-![App.png](https://i.postimg.cc/mr0nt4SW/Captura-de-pantalla-de-2022-10-23-22-49-57.png)
+![App2.png](https://i.postimg.cc/kMHXy1v1/App2.png)
 
 In this case we used a predefined JS template deployed in React which basic function is activate a counte on every click of the center button and has some other links to React interest subjects.
 
